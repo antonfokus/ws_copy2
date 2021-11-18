@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.drawer.WearableDrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".ui.main.MainActivity"
+    tools:deviceIds="wear">
+
+    <androidx.wear.widget.BoxInsetLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_boxedEdges="all">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:useDefaultMargins="true">
+
+                <ImageButton
+                    android:id="@+id/btnHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_home"
+                    android:padding="10dp"
+                    android:layout_margin="8dp" />
+
+                <ImageButton
+                    android:id="@+id/btnList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_list"
+                    android:padding="10dp"
+                    android:layout_margin="8dp" />
+
+                <ImageButton
+                    android:id="@+id/btnInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_info"
+                    android:padding="10dp"
+                    android:layout_margin="8dp" />
+
+                <ImageButton
+                    android:id="@+id/btnExit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_exit"
+                    android:padding="10dp"
+                    android:layout_margin="8dp" />
+
+            </GridLayout>
+        </FrameLayout>
+    </androidx.wear.widget.BoxInsetLayout>
+
+    <androidx.wear.widget.drawer.WearableNavigationDrawerView
+        android:id="@+id/navigationDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:navigationStyle="multiPage" />
+</androidx.wear.widget.drawer.WearableDrawerLayout>
